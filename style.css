@@ -11,46 +11,38 @@
 /* basic elements */
 
 header {
-	width: 575px;
-	height: 100px;
+	width:600px;
+	height:600px;
+	border-radius:300px;
+	font-size:40px;
+	color:#fff;
+	line-height:100px;
+	text-align:center;
+	background: lightblue;
+	position: absolute;
+	left: 400px;
+	animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+	
+.intro {
+	width:0px;
+	height:0px;
+	border-radius:250px;
+	font-size: 10px;
+	color:#fff;
+	line-height:100px;
 	background: lightblue;
 }
-.intro [role="banner"] h1 {
-	font-size: 100px;
-	color: black;
-	position: absolute;
-    left: 400px;
-    top: -80px;
-	font-family: "Times New Roman", Georgia, Serif;
-	<!---background-color: lightpink;
-    background-attachment: fixed;
-    background-position: center;-->
-}
 
-.intro [role="banner"] h2 {
-	font-size: 30px;
-	color: black;
-	position: absolute;
-    left: 800px;
-    top: 80px;
-	font-family: "Times New Roman", Georgia, Serif;
-} 
 .summary {
 	font-size: 10px;
 	color: black;
 	position: absolute;
+	line-height: 10px;
     left: 600px;
-    top: 200px;
-	font-family: "Times New Roman", Georgia, Serif;
-	width: 300px;
-}
-
-.summary:last-child {
-	font-size: 12px;
-	color: red;
-	position: absolute;
-	left: 600px;
-	top: 200px;
+    top: 700px;
 	font-family: "Times New Roman", Georgia, Serif;
 	width: 300px;
 }
@@ -70,7 +62,7 @@ header {
 	padding: 10px;
 	background: whites;
 	color: white;
-	top: 300px;
+	top: 900px;
 	left: 500px;
 	text: blink;
 	color: black;
@@ -93,7 +85,7 @@ header {
 	padding: 10px;
 	background: white;
 	color: white;
-	top: 600px;
+	top: 1200px;
 	left: 500px;
 	text: blink;
 	color: black;
@@ -116,7 +108,7 @@ header {
 	padding: 10px;
 	background: whites;
 	color: white;
-	top: 900px;
+	top: 1500px;
 	left: 500px;
 	text: blink;
 	color: black;
@@ -139,7 +131,7 @@ header {
 	padding: 10px;
 	background: white;
 	color: white;
-	top: 1250px;
+	top: 1900px;
 	left: 500px;
 	text: blink;
 	color: black;
@@ -162,7 +154,7 @@ header {
 	padding: 10px;
 	background: white;
 	color: white;
-	top: 1470px;
+	top: 2100px;
 	left: 500px;
 	text: blink;
 	color: black;
@@ -216,8 +208,9 @@ header {
 .sidebar {
 	margin-right: 700px; 
 	position: absolute; 
-	top: 40px; 
-	right: 450px;
+	top: 600px; 
+	<!--right: 450px;--->
+	left: 200px;
 	}
 .sidebar .wrapper { 
 	font: 10px verdana, sans-serif; 
