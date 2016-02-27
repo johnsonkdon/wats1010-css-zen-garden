@@ -10,6 +10,30 @@
 
 /* basic elements */
 
+@-webkit-keyframes animate-heading1 {
+	/* CSS animation for h1 in circle */
+    from {top: 0;}
+    to {top: 28%;}
+} 
+
+@keyframes animate-heading1 {
+	/* CSS animation for h1 in circle */
+    from {top: 0;}
+    to {top: 28%;}
+}
+
+@-webkit-keyframes animate-heading2 {
+	/* CSS animation for h2 in circle */
+    from {top: 10%;}
+    to {top: 42%;}
+} 
+
+@keyframes animate-heading2 {
+	/* CSS animation for h2 in circle */
+     from {top: 10%;}
+    to {top: 42%;}
+}
+
 header {
 	width:600px;
 	height:600px;
@@ -24,8 +48,51 @@ header {
 	animation-name: example;
     animation-duration: 4s;
     animation-iteration-count: 3;
+	padding:0 10px;
 }
-	
+
+header h1,	header h2{	
+	position:absolute;
+	width:100%;	
+	margin:0;
+	padding:0;
+	line-height:60px;
+}	
+
+header h1{
+	top: 28%;
+	left:0;	
+	animation-name: animate-heading1;
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+}
+
+header h2{	
+	top: 42%;
+	left:0;
+	line-height:90px;
+	animation-name: animate-heading2;
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+}
+
+
+
+.intro div[role='article'],.supporting div[role='article']{	
+	background: rgba(33,180,226,0.9);
+	background: -moz-linear-gradient(top, rgba(33,180,226,0.9) 0%, rgba(113,206,239,0.9) 0%, rgba(183,222,237,0.69) 98%, rgba(183,222,237,0.68) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(33,180,226,0.9)), color-stop(0%, rgba(113,206,239,0.9)), color-stop(98%, rgba(183,222,237,0.69)), color-stop(100%, rgba(183,222,237,0.68)));
+	background: -webkit-linear-gradient(top, rgba(33,180,226,0.9) 0%, rgba(113,206,239,0.9) 0%, rgba(183,222,237,0.69) 98%, rgba(183,222,237,0.68) 100%);
+	background: -o-linear-gradient(top, rgba(33,180,226,0.9) 0%, rgba(113,206,239,0.9) 0%, rgba(183,222,237,0.69) 98%, rgba(183,222,237,0.68) 100%);
+	background: -ms-linear-gradient(top, rgba(33,180,226,0.9) 0%, rgba(113,206,239,0.9) 0%, rgba(183,222,237,0.69) 98%, rgba(183,222,237,0.68) 100%);
+	background: linear-gradient(to bottom, rgba(33,180,226,0.9) 0%, rgba(113,206,239,0.9) 0%, rgba(183,222,237,0.69) 98%, rgba(183,222,237,0.68) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21b4e2', endColorstr='#b7deed', GradientType=0 );
+}
+
+div.summary[role='article']{
+	background:transparent;
+}
+
 .intro {
 	width:0px;
 	height:0px;
@@ -82,6 +149,7 @@ header {
 	border: 2px solid white;
 	width: 700px;
 	margin: 20px;
+	margin-left:75px;
 	padding: 10px;
 	background: white;
 	color: white;
@@ -128,6 +196,7 @@ header {
 	border: 2px solid white;
 	width: 700px;
 	margin: 20px;
+	margin-left:75px;
 	padding: 10px;
 	background: white;
 	color: white;
@@ -150,7 +219,8 @@ header {
 	position: absolute;
 	border: 2px solid white;
 	width: 700px;
-	margin: 20px;
+	margin: 20px;	
+	margin-bottom: 80px;
 	padding: 10px;
 	background: white;
 	color: white;
@@ -214,10 +284,10 @@ header {
 	}
 .sidebar .wrapper { 
 	font: 10px verdana, sans-serif; 
-	background: transparent url(paper-bg.jpg) top left repeat-y; 
+	background: #000 url(paper-bg.jpg) top left repeat-y; 
 	padding: 10px; 
 	margin-top: 150px; 
-	width: 130px; 
+	width: 320px; 
 	}
 .sidebar h3.select { 
 	background: transparent url(h3.gif) no-repeat top left; 
@@ -247,7 +317,8 @@ header {
 	overflow: hidden;
 	}
 
-.sidebar li {
+.sidebar li {	
+	color:#fff;
 	line-height: 3.5em; 
 	background: transparent url(cr1.gif) no-repeat top center; 
 	display: block; 
@@ -256,12 +327,16 @@ header {
 	list-style-type: none;
 	}
 .sidebar li a:link {
-	color: #988F5E;
+	color:#fff;
+	font-size:12px;
 	}
 .sidebar li a:visited {
 	color: #B3AE94;
 	}
 
+.sidebar li a:hover{
+	color:#1C5669;
+}
 a:link    {
   /* Applies to all unvisited links */
   text-decoration: none;
@@ -292,10 +367,43 @@ a:active  {
   } 
 
 footer {
-   position: fixed;
-   left: 600px;
+   position: fixed;   
+   left:28%;
    bottom:0px;
    height:30px;
    width:100%;
    background: white;
+   padding:10px 0
 }
+
+footer a:link{	
+	background: url(footer-icons.png) no-repeat transparent;	
+	float:left;	
+    width: 32px;
+    height: 32px;
+	display:block;
+	color:#B7DEED;	
+	text-indent:9999px;	
+	margin:0 50px;
+}
+
+footer a.zen-validate-html{
+    background-position: -5px -5px;
+}
+
+footer a.zen-license {
+    background-position: -47px -5px;
+}
+
+footer a.zen-accessibility {
+    background-position: -89px -5px;
+}
+
+footer a.zen-github {
+    background-position: -131px -5px;
+}
+
+footer a.zen-validate-css{
+    background-position: -173px -5px;
+}
+
